@@ -1,7 +1,17 @@
-﻿using System.Collections;
+﻿/*
+Source File Name: EnemyController.cs
+Student Name: Ramin Amiri
+StudentID: 101190944
+Date Last Modified: 2020-10-24
+Program Description: Controls the movement for the enemies.
+Revision Histroy: Modified for the enemies to move vertically and not horizontally.
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Controls the movement on the enemies.
 public class EnemyController : MonoBehaviour
 {
     //public float horizontalSpeed;

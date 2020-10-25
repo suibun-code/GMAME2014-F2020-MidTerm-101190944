@@ -1,9 +1,19 @@
-﻿using System.Collections;
+﻿/*
+Source File Name: PlayerController.cs
+Student Name: Ramin Amiri
+StudentID: 101190944
+Date Last Modified: 2020-10-24
+Program Description: Controls the player's movement; input from the user and the available axes on which the player can move.
+Revision Histroy: Modified for the player to move up and down rather than left and right.
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEditor;
 using UnityEngine;
 
+//Manages the player's movement and input.
 public class PlayerController : MonoBehaviour
 {
     public BulletManager bulletManager;

@@ -1,7 +1,17 @@
-﻿using System.Collections;
+﻿/*
+Source File Name: BulletFactory.cs
+Student Name: Ramin Amiri
+StudentID: 101190944
+Date Last Modified: Unknown.
+Program Description: Factory for making different types of bullets.
+Revision Histroy: No recent changes.
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Responsible for making bullets.
 [System.Serializable]
 public class BulletFactory : MonoBehaviour
 {

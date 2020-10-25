@@ -1,7 +1,17 @@
-﻿using System.Collections;
+﻿/*
+Source File Name: BulletManager.cs
+Student Name: Ramin Amiri
+StudentID: 101190944
+Date Last Modified: Unknown.
+Program Description: Manages the bullet; what type of bullet is obtained from the factory.
+Revision Histroy: No recent changes.
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//The bullet manager for handling tasks relating bullets such as the bullet object pool.
 [System.Serializable]
 public class BulletManager : MonoBehaviour
 {

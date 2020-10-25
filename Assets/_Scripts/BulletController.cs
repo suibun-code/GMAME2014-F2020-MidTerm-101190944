@@ -1,7 +1,17 @@
-﻿using System.Collections;
+﻿/*
+Source File Name: BulletController.cs
+Student Name: Ramin Amiri
+StudentID: 101190944
+Date Last Modified: 2020-10-24
+Program Description: Controls the bullet movement.
+Revision Histroy: Modified for the bullets to move horizontally and not vertically.
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Controls the movement of the bullet.
 public class BulletController : MonoBehaviour, IApplyDamage
 {
     //public float verticalSpeed;
@@ -24,11 +34,13 @@ public class BulletController : MonoBehaviour, IApplyDamage
         _CheckBounds();
     }
 
+    //Moves the bullet.
     private void _Move()
     {
         transform.position += new Vector3(mHorizontalSpeed, 0.0f, 0.0f) * Time.deltaTime;
     }
 
+    //Check the bullet's bounds.
     private void _CheckBounds()
     {
         if (transform.position.x > mHorizontalBoundary)
@@ -37,12 +49,14 @@ public class BulletController : MonoBehaviour, IApplyDamage
         }
     }
 
+    //If a bullet hits an enemy.
     public void OnTriggerEnter2D(Collider2D other)
     {
         //Debug.Log(other.gameObject.name);
         bulletManager.ReturnBullet(gameObject);
     }
 
+    //Applies damage to what is hit.
     public int ApplyDamage()
     {
         return damage;
