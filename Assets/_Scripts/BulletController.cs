@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour, IApplyDamage
 {
-    public float verticalSpeed;
-    public float verticalBoundary;
+    //public float verticalSpeed;
+    //public float verticalBoundary;
+    public float mHorizontalSpeed;
+    public float mHorizontalBoundary;
     public BulletManager bulletManager;
     public int damage;
     
@@ -24,12 +26,12 @@ public class BulletController : MonoBehaviour, IApplyDamage
 
     private void _Move()
     {
-        transform.position += new Vector3(0.0f, verticalSpeed, 0.0f) * Time.deltaTime;
+        transform.position += new Vector3(mHorizontalSpeed, 0.0f, 0.0f) * Time.deltaTime;
     }
 
     private void _CheckBounds()
     {
-        if (transform.position.y > verticalBoundary)
+        if (transform.position.x > mHorizontalBoundary)
         {
             bulletManager.ReturnBullet(gameObject);
         }
